@@ -105,6 +105,7 @@ nav a:hover {
 /* Hero */
 .hero {
     background: #fffcf4;
+    padding-bottom: 65px;
     padding-top: 56px; /* margin sẽ tạo ra khoảng trắng (dễ nhìn thấy khi để màu bg) */
 }
 
@@ -124,6 +125,7 @@ nav a:hover {
     height: 875px;
     border-radius: 20px;
     object-fit: cover; /* xử lý ảnh để giữ tỉ lệ */
+    vertical-align: bottom; /* loại bỏ baseline của chữ */
 }
 
 .hero-sumary {

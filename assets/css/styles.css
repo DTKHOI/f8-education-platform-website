@@ -12,6 +12,9 @@ body {
 }
 
 /* Common */
+:root {
+    --primary-color: #ffb900;
+}
 
 a {
     text-decoration: none;
@@ -19,15 +22,20 @@ a {
 
 .btn {
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 600;
     line-height: 1.86;
     text-align: center;
     background: #171100;
     color: #fff;
-    border-radius: 25px;
-    padding: 6px 16px;
+    border-radius: 999px;
+    padding: 0px 16px;
     min-width: 118px;
+    line-height: 50px;
+}
+
+.btn:hover {
+    opacity: 0.9;
 }
 
 .main-content {
@@ -89,8 +97,9 @@ nav a:hover {
     text-shadow: 1px 0 0 currentColor;
 }
 
-.header .sign-up .btn {
+.header .btn .sign-up {
     min-width: 144px;
+    padding: 6px;
 }
 
 /* Hero */
@@ -202,54 +211,60 @@ nav a:hover {
     line-height: 1.67;
 }
 
-.call-action {
-    display: flex;
+.content-block .hero-cta {
+    background: var(--primary-color);
+    min-width: 180px;
+    line-height: 64px;
 }
 
-.call-action button {
+.hero .action-group {
     display: flex;
     align-items: center;
+    margin: 38px 0 48px;
+}
+
+.hero .watch-video {
+    border: none;
     background: transparent;
-    /* border: transparent solid; */
+    display: flex;
+    margin-left: 28px;
+    align-items: center;
+    cursor: pointer;
 }
 
-.content-block .call-action .btn {
-    margin-top: 38px;
-    border-radius: 32px;
-    background: #ffb900;
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: 600;
-    line-height: 1.67;
-    min-width: 180px;
-}
-
-.call-action .action {
-    color: #171100;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.67;
-    margin-left: 14px;
-}
-
-.content-block .watch .icon {
+.hero .watch-video .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40px;
     height: 40px;
-    border-radius: 20px;
+    border-radius: 40px;
     background: #fff;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.07);
-    padding: 14px 17px;
+}
+
+.hero .watch-video .title {
+    margin-left: 14px;
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1, 67;
 }
 
 .stats .desc {
-    margin-top: 48px;
+    margin-top: 8px;
 }
 
 .stats .info strong {
+    padding-right: 8px;
+    padding-left: 28px;
     color: #171100;
     font-family: Sen;
     font-size: 4.4rem;
     font-weight: 700;
     line-height: 1.23;
+}
+
+.stats .info strong:first-child {
+    padding-left: 0px;
 }

@@ -14,6 +14,7 @@ body {
 /* --------------- Common ---------------- */
 :root {
     --primary-color: #ffb900;
+    --sub-title-font: "Sen", "sans-serif";
 }
 
 a {
@@ -22,16 +23,15 @@ a {
 
 .btn {
     display: inline-block;
-    font-size: 1.6rem;
-    font-weight: 600;
-    line-height: 1.86;
-    text-align: center;
-    background: #171100;
-    color: #fff;
-    border-radius: 999px;
-    padding: 0px 16px;
     min-width: 118px;
+    padding: 0 16px;
     line-height: 50px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #ffffff;
+    background: #171100;
+    border-radius: 999px;
 }
 
 .btn:hover {
@@ -135,7 +135,7 @@ nav a:hover {
     vertical-align: bottom; /* loại bỏ baseline của chữ */
 }
 
-.hero-sumary {
+.hero-summary {
     position: absolute;
     background: #fff;
     border-radius: 12px;
@@ -146,16 +146,16 @@ nav a:hover {
     padding: 28px 24px;
 }
 
-.hero-sumary .course {
+.hero-summary .course {
     display: flex;
     align-items: center;
 }
 
-.hero-sumary .course + .course {
+.hero-summary .course + .course {
     margin-top: 22px; /* giãn cách các phần tử mà không ảnh hưởng tới item đầu */
 }
 
-.hero-sumary .label {
+.hero-summary .label {
     /* height: 26px;  */
     color: #5f5b53;
     font-size: 1.4rem;
@@ -163,7 +163,7 @@ nav a:hover {
     font-weight: 400;
 }
 
-.hero-sumary .title {
+.hero-summary .title {
     /* height: 30px; không cần thiết */
     color: #171100;
     font-size: 1.8rem;
@@ -171,7 +171,7 @@ nav a:hover {
     line-height: 1.67;
 }
 
-.hero-sumary .icon {
+.hero-summary .icon {
     width: 48px;
     height: 48px;
     border-radius: 24px;
@@ -180,19 +180,19 @@ nav a:hover {
     justify-content: center;
 }
 
-.hero-sumary .course:nth-child(1) .icon {
+.hero-summary .course:nth-child(1) .icon {
     background: #fff9e8;
 }
 
-.hero-sumary .course:nth-child(2) .icon {
+.hero-summary .course:nth-child(2) .icon {
     background: #fcefff;
 }
 
-.hero-sumary .course:nth-child(3) .icon {
+.hero-summary .course:nth-child(3) .icon {
     background: #ebeaff;
 }
 
-.hero-sumary .info {
+.hero-summary .info {
     margin-left: 16px;
 }
 
@@ -321,5 +321,88 @@ nav a:hover {
 .nav-group .icon:last-child {
     margin-left: 18px;
     border: none;
+    background: var(--primary-color);
+}
+
+/* List */
+.list {
+    display: flex;
+    margin-top: 55px;
+    gap: 30px;
+}
+
+.list .item .thumb {
+    width: 100%;
+    height: 278px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.list .body {
+    padding: 17px 22px;
+    border-radius: 0px 0px 12px 12px;
+    border: 1px solid #e2dfda;
+}
+
+.list .body.hover {
+    border: none;
+    box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.05);
+}
+
+.item .title-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-group .title {
+    color: #171100;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.title-group .rating {
+    display: flex;
+    align-items: center;
+}
+
+.title-group .score {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+    margin-left: 6px;
+}
+
+.list .desc {
+    margin-top: 6px;
+    color: #5f5b53;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
+}
+
+.list .body .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.body .info .price {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.body .info {
+    margin-top: 12px;
+}
+
+.body .info .btn {
+    min-width: 118px;
+}
+
+.body .info .btn.hover {
     background: var(--primary-color);
 }

@@ -14,6 +14,7 @@ body {
 /* --------------- Common ---------------- */
 :root {
     --primary-color: #ffb900;
+    --elementary-color: #f7f7f7;
     --sub-title-font: "Sen", "sans-serif";
 }
 
@@ -405,4 +406,66 @@ nav a:hover {
 
 .body .info .btn.hover {
     background: var(--primary-color);
+}
+
+/* ------------- Leaner Reivew ------------- */
+.review {
+    margin-top: 200px;
+    background: #2e2100;
+}
+
+.review .body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 96px 0;
+}
+
+.avatar {
+    width: 72px;
+    height: 72px;
+}
+
+.avatar img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+}
+
+.student-name {
+    margin-top: 18px;
+    color: var(--elementary-color);
+    font-family: var(--sub-title-font);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.42;
+}
+
+.info-row .desc {
+    margin-top: 4px;
+}
+
+.info-row .icon {
+    margin-top: 28px;
+}
+
+.comment-row {
+    width: 66%;
+    position: relative;
+    /* margin-left: 271px; */
+}
+
+.comment-row .text {
+    color: #fff;
+    font-size: 2.6rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.54;
+}
+
+.comment-row .quote {
+    position: absolute;
+    left: -35px;
+    top: -30px;
 }

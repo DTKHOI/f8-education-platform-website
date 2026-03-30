@@ -53,6 +53,13 @@ a {
     line-height: 1.67;
 }
 
+.separate {
+    width: 160px;
+    height: 1px;
+    background: #e2dfda;
+    margin-top: 12px;
+}
+
 /* ------------------- Header ---------------------- */
 .header {
     background: #fffcf4;
@@ -86,6 +93,11 @@ nav a {
     text-align: center;
     padding: 8px 21px;
     position: relative;
+}
+
+nav .active a {
+    color: #171100;
+    font-weight: 600;
 }
 
 nav li.active a::after {
@@ -592,12 +604,8 @@ nav a:hover {
     background: var(--primary-color);
 }
 
-.separate {
-    width: 160px;
-    height: 1px;
+.blog .separate {
     border-radius: 0.5px;
-    background: #e2dfda;
-    margin-top: 12px;
 }
 
 .blog .title {
@@ -625,4 +633,120 @@ nav a:hover {
 .blog .icon {
     display: block;
     text-align: center;
+}
+
+/* ------------------- Footer ----------------- */
+#footer {
+    background: #2e2100;
+    padding: 96px 0px;
+}
+
+#footer .body {
+    display: flex;
+    gap: 145px;
+}
+
+#footer .contact {
+    margin-top: 4px;
+}
+
+.contact .desc {
+    color: #bfbcb2;
+    margin-top: 18px;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    width: 267px;
+}
+
+.social-row {
+    margin-top: 18px;
+    display: flex;
+    gap: 18px;
+}
+
+.social-row .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 3px;
+}
+
+.social-row .box:hover {
+    background-color: #f9f9f925;
+}
+
+.our-company {
+    display: flex;
+    gap: 130px;
+}
+
+.our-company .title {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75;
+}
+
+.our-company .desc {
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.our-company .column.support {
+    white-space: nowrap;
+}
+
+.our-company .column-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+#footer .separate {
+    background: #59554b;
+    width: 130px;
+}
+
+.column.address .desc {
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
+}
+
+.address-text {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#footer strong {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.86;
+}
+
+#footer .separate.end {
+    margin-top: 38px;
+    width: 100%;
+}
+
+#footer .text-box {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+}
+
+#footer .separate.end {
+    color: #807d74;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
 }

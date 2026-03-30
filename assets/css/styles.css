@@ -707,6 +707,10 @@ nav a:hover {
     margin-top: 28px;
 }
 
+.column-list .link:hover {
+    text-decoration: underline;
+}
+
 #footer .separate {
     background: #59554b;
     width: 130px;

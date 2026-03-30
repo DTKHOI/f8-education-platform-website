@@ -412,15 +412,16 @@ nav a:hover {
 .review {
     margin-top: 200px;
     background: #2e2100;
+    padding: 96px 0;
 }
 
 .review .body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 96px 0;
 }
 
+/* Student Info */
 .avatar {
     width: 72px;
     height: 72px;
@@ -450,6 +451,7 @@ nav a:hover {
     margin-top: 28px;
 }
 
+/* Student's Review */
 .comment-row {
     width: 66%;
     position: relative;
@@ -468,4 +470,69 @@ nav a:hover {
     position: absolute;
     left: -35px;
     top: -30px;
+}
+
+/* ------------- Benefit -------------- */
+.benefit {
+    padding: 200px 0px;
+}
+
+/* Img group */
+.benefit-stats,
+.benefit-call {
+    display: flex;
+    align-items: center;
+    gap: 130px;
+}
+
+.img-group {
+    display: flex;
+    gap: 30px;
+}
+
+.img-group .learner:first-child {
+    align-self: flex-end;
+    transform: translateY(34px);
+}
+
+.learner {
+    object-fit: cover;
+    border-radius: 16px;
+    max-width: 270px;
+}
+
+/* Content group */
+.content-group .title {
+    color: #171100;
+    font-family: var(--sub-title-font);
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.26;
+    letter-spacing: -0.76px;
+}
+
+.content-group .desc,
+.reference {
+    margin-top: 16px;
+    color: #5f5b53;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.content-group .btn {
+    margin-top: 32px;
+    background: var(--primary-color);
+    min-width: 137px;
+}
+
+.benefit-call {
+    margin-top: 233px;
+}
+
+.benefit-call .learner-img {
+    object-fit: cover;
+    max-width: 470px;
+    height: 404px;
+    border-radius: 20px;
 }

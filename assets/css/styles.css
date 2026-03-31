@@ -617,10 +617,9 @@ nav a:hover {
     background: var(--primary-color);
 }
 
-.blog .icon-group {
-    margin-top: 38px;
-    display: flex;
-    justify-content: center;
+.blog .dots-icon {
+    display: block;
+    margin: 38px auto 0px;
 }
 
 .blog .icon {

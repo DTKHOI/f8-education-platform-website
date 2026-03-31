@@ -11,9 +11,13 @@ body {
     font-family: "Poppins", "sans-serif";
 }
 
-/* Common */
+/* --------------- Common ---------------- */
 :root {
     --primary-color: #ffb900;
+    --elementary-color: #f7f7f7;
+    --sub-title-font: "Sen", "sans-serif";
+    --text-color: #5f5b53;
+    --heading-color: #171100;
 }
 
 a {
@@ -22,16 +26,15 @@ a {
 
 .btn {
     display: inline-block;
-    font-size: 1.6rem;
-    font-weight: 600;
-    line-height: 1.86;
-    text-align: center;
-    background: #171100;
-    color: #fff;
-    border-radius: 999px;
-    padding: 0px 16px;
     min-width: 118px;
+    padding: 0 16px;
     line-height: 50px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #ffffff;
+    background: var(--heading-color);
+    border-radius: 999px;
 }
 
 .btn:hover {
@@ -45,7 +48,21 @@ a {
     margin-right: auto;
 }
 
-/* Header */
+.desc {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67;
+}
+
+.separate {
+    width: 160px;
+    height: 1px;
+    background: #e2dfda;
+    margin-top: 12px;
+}
+
+/* ------------------- Header ---------------------- */
 .header {
     background: #fffcf4;
 }
@@ -72,12 +89,17 @@ nav ul {
 }
 
 nav a {
-    color: #5f5b53;
+    color: var(--text-color);
     font-size: 1.6rem;
     font-weight: 400;
     text-align: center;
     padding: 8px 21px;
     position: relative;
+}
+
+nav .active a {
+    color: var(--heading-color);
+    font-weight: 600;
 }
 
 nav li.active a::after {
@@ -89,11 +111,11 @@ nav li.active a::after {
     left: 21px;
     bottom: 6px;
     border-radius: 1px;
-    background: #171100;
+    background: var(--heading-color);
 }
 
 nav a:hover {
-    color: #171100;
+    color: var(--heading-color);
     text-shadow: 1px 0 0 currentColor;
 }
 
@@ -102,9 +124,10 @@ nav a:hover {
     padding: 6px;
 }
 
-/* Hero */
+/* --------------------- Hero ----------------------- */
 .hero {
     background: #fffcf4;
+    padding-bottom: 65px;
     padding-top: 56px; /* margin sẽ tạo ra khoảng trắng (dễ nhìn thấy khi để màu bg) */
 }
 
@@ -121,12 +144,13 @@ nav a:hover {
 
 .hero .media-block .img {
     width: 470px;
-    height: 875px;
+    height: 675px;
     border-radius: 20px;
     object-fit: cover; /* xử lý ảnh để giữ tỉ lệ */
+    vertical-align: bottom; /* loại bỏ baseline của chữ */
 }
 
-.hero-sumary {
+.hero-summary {
     position: absolute;
     background: #fff;
     border-radius: 12px;
@@ -137,32 +161,32 @@ nav a:hover {
     padding: 28px 24px;
 }
 
-.hero-sumary .course {
+.hero-summary .course {
     display: flex;
     align-items: center;
 }
 
-.hero-sumary .course + .course {
+.hero-summary .course + .course {
     margin-top: 22px; /* giãn cách các phần tử mà không ảnh hưởng tới item đầu */
 }
 
-.hero-sumary .label {
+.hero-summary .label {
     /* height: 26px;  */
-    color: #5f5b53;
+    color: var(--text-color);
     font-size: 1.4rem;
     line-height: 1.86;
     font-weight: 400;
 }
 
-.hero-sumary .title {
+.hero-summary .title {
     /* height: 30px; không cần thiết */
-    color: #171100;
+    color: var(--heading-color);
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.67;
 }
 
-.hero-sumary .icon {
+.hero-summary .icon {
     width: 48px;
     height: 48px;
     border-radius: 24px;
@@ -171,19 +195,19 @@ nav a:hover {
     justify-content: center;
 }
 
-.hero-sumary .course:nth-child(1) .icon {
+.hero-summary .course:nth-child(1) .icon {
     background: #fff9e8;
 }
 
-.hero-sumary .course:nth-child(2) .icon {
+.hero-summary .course:nth-child(2) .icon {
     background: #fcefff;
 }
 
-.hero-sumary .course:nth-child(3) .icon {
+.hero-summary .course:nth-child(3) .icon {
     background: #ebeaff;
 }
 
-.hero-sumary .info {
+.hero-summary .info {
     margin-left: 16px;
 }
 
@@ -194,7 +218,7 @@ nav a:hover {
 }
 
 .content-block .heading {
-    color: #171100;
+    color: var(--heading-color);
     font-family: Sen;
     font-size: 5.8rem;
     font-weight: 700;
@@ -205,7 +229,7 @@ nav a:hover {
 
 .content-block .desc {
     margin-top: 22px;
-    color: #5f5b53;
+    color: var(--text-color);
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 1.67;
@@ -245,7 +269,7 @@ nav a:hover {
 
 .hero .watch-video .title {
     margin-left: 14px;
-    color: #171100;
+    color: var(--heading-color);
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 1, 67;
@@ -258,7 +282,7 @@ nav a:hover {
 .stats .info strong {
     padding-right: 8px;
     padding-left: 28px;
-    color: #171100;
+    color: var(--heading-color);
     font-family: Sen;
     font-size: 4.4rem;
     font-weight: 700;
@@ -267,4 +291,461 @@ nav a:hover {
 
 .stats .info strong:first-child {
     padding-left: 0px;
+}
+
+/* -------------- Popular courses ---------------- */
+.popular {
+    margin-top: 200px;
+}
+
+.popular .sub-title {
+    color: var(--heading-color);
+    font-family: Sen;
+    font-size: 3.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.26;
+    letter-spacing: -0.76px;
+}
+
+.popular .row .desc {
+    margin-top: 16px;
+    width: 458px;
+}
+
+.popular .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.nav-group {
+    display: flex;
+}
+
+.nav-group .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    border: var(--primary-color) solid 1.5px;
+}
+
+.nav-group .icon:last-child {
+    margin-left: 18px;
+    border: none;
+    background: var(--primary-color);
+}
+
+/* List */
+.list {
+    display: flex;
+    margin-top: 55px;
+    gap: 30px;
+}
+
+.list .item .thumb {
+    width: 100%;
+    height: 278px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.list .body {
+    padding: 17px 22px;
+    border-radius: 0px 0px 12px 12px;
+    border: 1px solid #e2dfda;
+}
+
+.list .body.hover {
+    border: none;
+    box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.05);
+}
+
+.item .title-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-group .title {
+    color: var(--heading-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.title-group .rating {
+    display: flex;
+    align-items: center;
+}
+
+.title-group .score {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+    margin-left: 6px;
+}
+
+.list .desc {
+    margin-top: 6px;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
+}
+
+.list .body .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.body .info .price {
+    color: var(--heading-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.body .info {
+    margin-top: 12px;
+}
+
+.body .info .btn {
+    min-width: 118px;
+}
+
+.body .info .btn.hover {
+    background: var(--primary-color);
+}
+
+/* ------------- Leaner Reivew ------------- */
+.review {
+    margin-top: 200px;
+    background: #2e2100;
+    padding: 96px 0;
+}
+
+.review .body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Student Info */
+.avatar {
+    width: 72px;
+    height: 72px;
+}
+
+.avatar img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+}
+
+.student-name {
+    margin-top: 18px;
+    color: var(--elementary-color);
+    font-family: var(--sub-title-font);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.42;
+}
+
+.info-row .desc {
+    margin-top: 4px;
+}
+
+.info-row .icon {
+    margin-top: 28px;
+}
+
+/* Student's Review */
+.comment-row {
+    width: 66%;
+    position: relative;
+    /* margin-left: 271px; */
+}
+
+.comment-row .text {
+    color: #fff;
+    font-size: 2.6rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.54;
+}
+
+.comment-row .quote {
+    position: absolute;
+    left: -35px;
+    top: -30px;
+}
+
+/* ------------- Benefit -------------- */
+.benefit {
+    padding: 200px 0px;
+}
+
+/* Img group */
+.benefit-stats,
+.benefit-call {
+    display: flex;
+    align-items: center;
+    gap: 130px;
+}
+
+.img-group {
+    display: flex;
+    gap: 30px;
+}
+
+.img-group .learner:first-child {
+    align-self: flex-end;
+    transform: translateY(34px);
+}
+
+.learner {
+    object-fit: cover;
+    border-radius: 16px;
+    max-width: 270px;
+}
+
+/* Content group */
+.content-group .title {
+    color: var(--heading-color);
+    font-family: var(--sub-title-font);
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.26;
+    letter-spacing: -0.76px;
+}
+
+.content-group .desc,
+.reference {
+    margin-top: 16px;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.content-group .btn {
+    margin-top: 32px;
+    background: var(--primary-color);
+    min-width: 137px;
+}
+
+.benefit-call {
+    margin-top: 233px;
+}
+
+.benefit-call .learner-img {
+    object-fit: cover;
+    max-width: 470px;
+    height: 404px;
+    border-radius: 20px;
+}
+
+/* Blog */
+.blog {
+    background: #fffcf4;
+    padding: 96px 0 134px;
+}
+
+.blog .sub-title {
+    color: #130606;
+    text-align: center;
+    font-family: var(--sub-title-font);
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.26;
+}
+
+.blog .body {
+    border: none;
+    padding: 20px;
+    box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.05);
+    background: #fff;
+}
+
+.blog .desc {
+    margin: 16px auto 0;
+    color: #696262;
+    text-align: center;
+    font-size: 1.6rem;
+    width: 448px;
+}
+
+.date {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.date::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    margin-right: 4px;
+    background: var(--primary-color);
+}
+
+.blog .separate {
+    border-radius: 0.5px;
+}
+
+.blog .title {
+    color: var(--heading-color);
+    font-size: 1.6rem;
+    margin-top: 12px;
+    font-weight: 600;
+    line-height: 1.75;
+}
+
+.blog .btn {
+    margin-top: 12px;
+}
+
+.blog .btn.hover {
+    background: var(--primary-color);
+}
+
+.blog .dots-icon {
+    display: block;
+    margin: 38px auto 0px;
+}
+
+.blog .icon {
+    display: block;
+    text-align: center;
+}
+
+/* ------------------- Footer ----------------- */
+#footer {
+    background: #2e2100;
+    padding: 96px 0px 28px;
+}
+
+#footer .body {
+    display: flex;
+    gap: 145px;
+}
+
+#footer .contact {
+    margin-top: 4px;
+}
+
+.contact .desc {
+    color: #bfbcb2;
+    margin-top: 18px;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    width: 267px;
+}
+
+.social-row {
+    margin-top: 18px;
+    display: flex;
+    gap: 18px;
+}
+
+.social-row .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 3px;
+}
+
+.social-row .box:hover {
+    background-color: #f9f9f925;
+}
+
+.our-company {
+    display: flex;
+    gap: 130px;
+}
+
+.our-company .title {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75;
+}
+
+.our-company .desc {
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.our-company .column.support {
+    white-space: nowrap;
+}
+
+.our-company .column-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.column-list .link:hover {
+    text-decoration: underline;
+}
+
+#footer .separate {
+    background: #59554b;
+    width: 130px;
+}
+
+.column.address .desc {
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
+}
+
+.address-text {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#footer strong {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.86;
+}
+
+#footer .separate.end {
+    margin-top: 38px;
+    width: 100%;
+}
+
+#footer .separate.end {
+    color: #807d74;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
+}
+
+#footer .copyright {
+    margin-top: 28px;
+    color: #807d74;
+    font-size: 1.4rem;
+    text-align: center;
 }

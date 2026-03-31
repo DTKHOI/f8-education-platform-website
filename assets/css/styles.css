@@ -754,3 +754,8 @@ nav a:hover {
     font-weight: 400;
     line-height: 1.86;
 }
+
+#footer .copyright {
+    color: #807d74;
+    font-size: 1.4rem;
+}

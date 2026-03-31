@@ -144,7 +144,7 @@ nav a:hover {
 
 .hero .media-block .img {
     width: 470px;
-    height: 875px;
+    height: 675px;
     border-radius: 20px;
     object-fit: cover; /* xử lý ảnh để giữ tỉ lệ */
     vertical-align: bottom; /* loại bỏ baseline của chữ */
@@ -632,7 +632,7 @@ nav a:hover {
 /* ------------------- Footer ----------------- */
 #footer {
     background: #2e2100;
-    padding: 96px 0px;
+    padding: 96px 0px 28px;
 }
 
 #footer .body {

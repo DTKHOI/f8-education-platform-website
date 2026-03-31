@@ -742,12 +742,6 @@ nav a:hover {
     width: 100%;
 }
 
-#footer .text-box {
-    margin-top: 28px;
-    display: flex;
-    justify-content: center;
-}
-
 #footer .separate.end {
     color: #807d74;
     font-size: 1.4rem;
@@ -756,6 +750,8 @@ nav a:hover {
 }
 
 #footer .copyright {
+    margin-top: 28px;
     color: #807d74;
     font-size: 1.4rem;
+    text-align: center;
 }
